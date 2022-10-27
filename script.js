@@ -12,7 +12,7 @@ let fighter = fighters.map((element, index) => {
         let card = document.createElement('div')
     
         image.className = 'fighter-image'
-        number.className = 'fighter-name'
+        number.className = 'fighter-number'
         name.className = 'fighter-name'
         card.className = 'fighter-card'
     

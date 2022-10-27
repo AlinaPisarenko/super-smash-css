@@ -5,3 +5,454 @@
     --color-font-primary: #ffffff;
     --color-font-secondary: #ff9900;
   }
+
+* {
+margin:0;
+box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    color: var(--color-font-primary);
+
+}
+
+.header{
+    width: 100vw;
+    min-height: 95vh;
+}
+
+#header-img-container {
+overflow-x: hidden;
+}
+
+#header-img {
+width: 8000px;
+height: 75vh;
+background: url("./smash\ assets/header-bg-1.png");
+animation: slide 140s linear infinite   
+}
+
+.header-menu {
+position: absolute;
+top:56%;
+left: 50%;
+transform: translate(-50%);
+width: 100vw;
+display: flex;
+align-items: flex-end;
+flex-wrap: wrap;
+justify-content: center
+}
+
+.header-info > div:nth-child(2) {
+margin-top: 2rem;
+margin-bottom: 1rem;
+display: flex;
+justify-content: flex-end;
+}
+
+.header-title {
+    width: 38rem;
+}
+
+.menu-btn-logo {
+    width: 40%;
+}
+
+.menu-btn {
+    width: 7.5rem;
+    height: 6.5rem;
+    background-color: var(--color-primary);
+    padding-top: 20px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+
+.date{
+color: var(--color-primary);
+font-size: 2.6rem;
+margin-right: 2rem;
+font-weight: 700;
+margin-left: 1rem;
+}
+
+.buy-btn {
+width: 11rem;
+border: none;
+background-color: var(--color-primary);
+color: var(--color-font-secondary);
+font-family: 'Roboto Condensed', sans-serif;
+font-weight: 400;
+font-size: 1.2rem;
+transition: all 0.2s ease-in-out;
+}
+
+
+.buy-btn:hover, .menu-btn:hover {
+cursor: pointer;
+transform: scale(1.1);
+}
+
+.characters {
+
+}
+
+.characters-display {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+
+.fighter-image {
+height: 100%;
+transition: all 0.2s ease-in-out;
+}
+
+.fighter-number {
+font-size: 2.5rem;
+margin-left: 1rem;
+}
+
+.fighter-name {
+font-size: 2.5rem;
+margin-left: 1rem;
+}
+
+.fighter-card {
+background-color: var(--color-primary);
+color: var(--color-font-primary);
+width:40rem;
+height: 7rem;
+border: 1px solid var( --color-tertiary);
+display: flex;
+justify-content: space-between;
+align-items: center;
+overflow: hidden;
+transition: all 0.2s ease-in-out;
+}
+
+.fighter-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: var(--color-secondary);
+}
+
+.fighter-card:hover img {
+transform: scale(1.2);
+}
+
+
+.footer {
+background-color: var(--color-primary);
+margin-top: 6rem;
+padding: 4rem 0 0 0;
+}
+
+.footer-title {
+width: 26rem;
+position: relative;
+left:50%;
+transform: translate(-50%)
+
+}
+
+.footer-links {
+    padding: 0.5rem 1rem;
+display:flex;
+justify-content: space-between;
+}
+
+.footer-link {
+    color: #808080;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 100;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+transform: scale(1.1);
+color: var(--color-font-primary);
+}
+
+.footer-links div {
+width: 30vw;
+display: flex;
+justify-content: space-between;
+
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(-4000px);
+    }
+}
+
+
+
+@media only screen and (max-width: 1400px) {
+.characters-display {
+    padding-top: 12rem;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+* {
+    margin: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    color: var(--color-font-primary);
+    overflow-x: hidden; 
+}
+
+.header {
+    width: 100vw;
+    min-height: 95vh;
+}
+
+#header-img-container {  
+    overflow-x: hidden; 
+}
+
+#header-img {
+    
+    width: 8000px; 
+    height: 75vh;
+    background: url("./smash\ assets/header-bg-1.png") repeat-x;
+    animation: slide 140s linear infinite;
+    z-index: 1;
+}
+
+.header-menu {
+    position: absolute;
+    top:56%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+.header-info > div:nth-child(2) {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+.date {
+padding-right: 2rem;
+color:#000000;
+font-weight: 700;
+font-size: 2.6rem;
+  }
+
+.date-logo{
+   padding-right: 1rem;
+  }
+
+.buy-btn {
+    width: 11rem;
+    padding: 14px;
+    border:none;
+    background-color: var(--color-primary);
+    color:var(--color-font-secondary);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+.header-title {
+width: 38rem;
+}
+
+.header-buttons { 
+display: flex;
+}
+
+.menu-btn {
+    padding-top: 20px;
+    background-color:   var(--color-primary);
+    width: 7.5rem;
+    height: 6.5rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-btn:not(:last-child) {
+    margin: 0 4px;
+}
+
+.menu-btn:hover, .buy-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: var(--color-tertiary); 
+}
+
+.menu-btn-logo {
+    width: 40%;
+}
+
+.menu-btn-text {
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+
+.characters-display {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+padding-bottom: 4rem;
+}
+
+
+
+.fighter-card {
+display: flex;
+justify-content: space-between;
+align-items: center; 
+background-color: var(  --color-primary);
+height: 7rem;
+width: 40rem;
+border: 1px solid var(--color-tertiary);
+overflow: hidden;
+transition: all 0.2s ease-in-out;
+}
+
+.fighter-card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: var(--color-secondary);
+}
+
+.fighter-card:hover img{
+    transform: scale(1.2);  
+}
+
+.fighter-image {  
+height: 100%;
+transition: all 0.2s ease-in-out;
+}
+
+.fighter-name {  
+margin-left: 1rem;
+font-size: 2.5rem;
+}
+
+.footer {
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    background-color: var(  --color-primary);
+   
+}
+
+.footer-title {
+    width: 26rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 5rem;
+}
+
+.footer-links  {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer-links div {
+    width: 30vw;
+    display: flex;
+    justify-content: space-between
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--color-font-primary);
+    opacity: 0.5;
+    font-weight: 300;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+
+
+
+@keyframes slide {
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translate(-4000px); 
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .characters-display {
+        padding-top: 12rem;
+        padding-bottom: 4rem;
+        }
+  }
+   */
